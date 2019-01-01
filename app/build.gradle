@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    sourceSets.main.jniLibs.srcDirs = ['libs']
+    compileSdkVersion 28
+    useLibrary 'org.apache.http.legacy'
+    buildToolsVersion rootProject.ext.buildTool
+    defaultConfig {
+        applicationId "com.example.lenovo.recitewords"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+//    sourceSets {
+////        main {
+////            manifest.srcFile '/src/main/AndroidManifest.xml'
+////            java.srcDirs = ['src']
+////            res.srcDirs = ['res']
+////        }
+////    }
+
+    signingConfigs {
+        release {
+            storeFile file("demokey.keystore")
+            storePassword "123456"
+            keyAlias "demokey.keystore"
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
+    implementation 'com.android.support:design:28.0.0-alpha1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0-alpha1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //bmob
+    implementation 'cn.bmob.android:bmob-sdk:3.6.8-rc4'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.okio:okio:2.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation files('libs/YoudaoTranslateOnline.jar')
+    implementation files('libs/YoudaoBase.jar')
+    implementation 'com.leon:lsettingviewlibrary:1.7.0'
+    implementation 'com.hjq:titlebar:3.5'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+}
+
+////自己的
+//MobSDK {
+//    appKey "2973b11991248"
+//    appSecret "3d2e0997dc5dd445d75149a395099c1e"
+//    permissions {
+//        exclude "android.permission.READ_SMS"
+//    }
+//    SMSSDK {}
+//}
+
+//官方账号
+MobSDK {
+    appKey 'moba6b6c6d6'
+    appSecret 'b89d2427a3bc7ad1aea1e1e8c1d36bf3'
+    permissions{
+        exclude "android.permission.READ_SMS"
+    }
+    SMSSDK {}
+}
+

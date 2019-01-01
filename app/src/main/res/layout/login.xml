@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/bg_login"/>
+    <ImageView
+        android:id="@+id/iv_1.2"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/phone" />
+
+    <shape.ClearEditText
+        android:id="@+id/phone_1"
+        android:layout_toRightOf="@id/iv_1.2"
+        android:layout_marginTop="250dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/login_shape"
+        android:inputType="phone"
+        android:hint="请输入手机号"
+        android:drawableRight="@mipmap/clear"
+        />
+
+    <ImageView
+        android:id="@+id/iv_1.3"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="310dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/lock"/>
+
+    <shape.Password_EditText
+        android:id="@+id/password_1"
+        android:layout_toRightOf="@id/iv_1.3"
+        android:layout_marginTop="320dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:background="@drawable/login_shape"
+        android:hint="请输入密码"
+        android:drawableRight="@mipmap/no_eye"
+        />
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/shape_one"
+        android:text="登录"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:id="@+id/sms_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="480dp"
+        android:text="用短信验证码登录"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/text_reg"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:layout_toRightOf="@+id/sms_login"
+        android:layout_marginLeft="110dp"
+        android:text="立即注册"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+</RelativeLayout>

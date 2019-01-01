@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/back">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="TranslateTo"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/ic_back_30dp"/>
+
+    <TextView
+        android:id="@+id/filepath"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/back_button"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/shibietext"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/filepath"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_above="@id/startBtn1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:onClick="record"
+            android:background="#FFFACD"
+            android:layout_marginRight="5dp"
+            android:text="开始录音" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FFFACD"
+            android:layout_marginLeft="5dp"
+            android:onClick="recordstop"
+            android:text="结束录音" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startBtn1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/recognizeBtn"
+        android:background="#FFFACD"
+        android:onClick="select"
+        android:text="从本地选择音频" />
+
+    <Button
+        android:id="@+id/recognizeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:onClick="recognize2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#FFFACD"
+        android:layout_marginRight="10dp"
+        android:text="开始识别" />
+
+
+</RelativeLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back"
+    tools:context=".Translate2Activity">
+
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="Clear2"
+                app:srcCompat="@drawable/ic_back_30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="翻译结果"
+                android:textColor="#1b1b71"
+                android:textSize="20dp"/>
+
+            <View
+                android:layout_below="@id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#1b1b71"
+                android:layout_margin="5dp"/>
+
+        </RelativeLayout>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="8dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/fanyiInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="left|top"
+                    android:text=""
+                    android:maxLines="1"
+                    android:textColor="#303030"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="8dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/translation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="left|top"
+                    android:text=""
+                    android:maxLines="1"
+                    android:textColor="#303030"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <Button
+                    android:id="@+id/startBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="发音" />
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/startBtn_i1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/startBtn"
+                    android:layout_alignTop="@id/startBtn"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                <Button
+                    android:id="@+id/ukstartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="     英式发音" />
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/startBtn_i2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ukstartBtn"
+                    android:layout_alignTop="@id/ukstartBtn"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                <Button
+                    android:id="@+id/usstartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="       美式发音" />
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/startBtn_i3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/usstartBtn"
+                    android:layout_alignTop="@id/usstartBtn"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <Button
+                    android:id="@+id/startBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="       结果发音" />
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/startBtn_i4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/startBtn1"
+                    android:layout_alignTop="@id/startBtn1"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/navigation">
+        <LinearLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/moreBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="查看更多释义"
+                android:textColor="#3399ff"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/spell"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#303030"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ukSpell"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#303030"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/usSpell"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#303030"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/means"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#303030"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/webmeans"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#303030"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

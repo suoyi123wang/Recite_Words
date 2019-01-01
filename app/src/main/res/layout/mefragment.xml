@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:leon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlueJeans"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_header"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/header1"
+                app:civ_border_color="?attr/colorPrimary"
+                app:civ_border_width="6dp"/>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="leonHua"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            leon:leftIcon="@drawable/message"
+            leon:leftText="消息中心"/>
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/content1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/book"
+            leon:leftText="选择背词内容" />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/calendar"
+            leon:leftText="我的记忆日记" />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/myword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/calendar"
+            leon:leftText="我的单词" />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/setting"
+            leon:leftText="基本设置" />
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/about"
+            leon:leftText="关于我们"/>
+    </LinearLayout>
+</LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+</RelativeLayout>

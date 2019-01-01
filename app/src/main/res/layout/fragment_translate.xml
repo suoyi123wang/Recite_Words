@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@mipmap/back"
+   >
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#5eacb1" >
+        <LinearLayout
+            android:id="@+id/inner_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/languageSelectFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical|right"
+                android:text="自动"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical|right"
+                android:textColor="#FFFFFF"
+                android:text=">"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/languageSelectTo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical|right"
+                android:textColor="#FFFFFF"
+                android:text="自动"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <View
+            android:layout_below="@id/inner_ll"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#366265"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@id/titleBar"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+            <EditText
+                android:id="@+id/fanyiInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="请输入单词、句子"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="5dp"/>
+            <ImageView
+                android:id="@+id/clear_button1"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="Clear"
+                app:srcCompat="@drawable/ic_clear_input"
+                android:layout_alignRight="@id/fanyiInputText"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/fanyiBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="TranslateTo"
+                app:srcCompat="@drawable/search_trans_30dp" />
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/CamPic"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/CamTrans"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="TranslateTo"
+                android:layout_below="@id/fanyiInputText"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/cam_blue"/>
+            <TextView
+                android:id="@+id/CamTrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照翻译"
+                android:textSize="20sp"
+                android:layout_below="@id/fanyiInputText"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="TranslateTo"
+                android:layout_toLeftOf="@id/line1"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                android:layout_alignTop="@id/CamPic"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/RecordPic"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/fanyiInputText"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="TranslateTo"
+                app:srcCompat="@drawable/ic_speech"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/line1"/>
+            <TextView
+                android:id="@+id/RecordTrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语音翻译"
+                android:textSize="20sp"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="TranslateTo"
+                android:layout_alignTop="@id/RecordPic"
+                android:layout_toRightOf="@+id/RecordPic"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card1"
+        android:layout_margin="10dp">
+
+        <ListView
+            android:id="@+id/commentList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#cccccc00"
+            android:listSelector="#00000000" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
